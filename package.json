@@ -1,0 +1,27 @@
+{
+  "name": "binder-utils",
+  "version": "0.0.1",
+  "description": "Utility functions that appear in multiple Binder modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binder-project/binder-utils.git"
+  },
+  "keywords": [
+    "binder",
+    "module",
+    "utilities"
+  ],
+  "author": "Andrew Osheroff <andrewosh@gmail.com> (http://andrewosh.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binder-project/binder-utils/issues"
+  },
+  "homepage": "https://github.com/binder-project/binder-utils",
+  "dependencies": {
+    "pm2": "^1.0.0"
+  }
+}
