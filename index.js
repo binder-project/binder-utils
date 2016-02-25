@@ -1,7 +1,7 @@
 var pm2 = require('pm2')
 
 module.exports = {
-  startWithPM2: function (app) {
+  startWithPM2: function (app, cb) {
     pm2.connect(function (err) {
       if (err) {
         console.error(err)
@@ -12,6 +12,10 @@ module.exports = {
           console.error(err)
         }
         pm2.disconnect()
+        if (cb) {
+          return cb(err)
+        }
+        return err
       })
     })
   }
