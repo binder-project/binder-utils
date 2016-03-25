@@ -5,16 +5,15 @@ module.exports = {
     pm2.connect(function (err) {
       if (err) {
         console.error(err)
-        process.exit(2)
+        if (cb) return cb(err)
+        return err
       }
       pm2.start(app, function (err, apps) {
         if (err) {
           console.error(err)
         }
         pm2.disconnect()
-        if (cb) {
-          return cb(err)
-        }
+        if (cb) return cb(err)
         return err
       })
     })
